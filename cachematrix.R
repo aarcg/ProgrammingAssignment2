@@ -73,6 +73,6 @@ cacheSolve <- function(x, ...) {
   x$setInverse(solve(x$getMatrix()))
   
   # Return a matrix that is the inverse of the matrix stored in 'x'
-  x$getInverse()
+  i
   
 }
