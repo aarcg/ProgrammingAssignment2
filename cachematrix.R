@@ -70,7 +70,8 @@ cacheSolve <- function(x, ...) {
   }
   
   # If the matrix has changed, compute the inverse and cache the result
-  x$setInverse(solve(x$getMatrix()))
+  i <- solve(x$getMatrix(), ...)
+  x$setInverse(i)
   
   # Return a matrix that is the inverse of the matrix stored in 'x'
   i
