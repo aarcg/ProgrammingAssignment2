@@ -17,8 +17,12 @@ makeCacheMatrix <- function(x = matrix()) {
   #
   # @param matrix m
   setMatrix <- function(m) {
+    # Only null the cache if the matrix is different than
+    # the one already stored.
+    if(!identical(m, x)) {
+      y <<- NULL
+    }
     x <<- m
-    y <<- NULL
   }
   
   # setInverse()
